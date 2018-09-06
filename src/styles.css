@@ -1,17 +1,17 @@
 @font-face {
     font-family: Arial-Black;
-    src: url('/src/assets/fonts/Arial\ Black.ttf');
+    src: url('/assets/fonts/Arial\ Black.ttf');
 }
 @font-face {
     font-family: Akzidenz-md;
-    src: url('/src/assets/fonts/AkzidenzGroteskBE-MdCn.ttf');
+    src: url('/assets/fonts/AkzidenzGroteskBE-MdCn.ttf');
 }
 @font-face {
     font-family: Akzidenz-bold;
-    src: url('/src/assets/fonts/AkzidenzGroteskBE-BoldCn.ttf');
+    src: url('/assets/fonts/AkzidenzGroteskBE-BoldCn.ttf');
 }
 body{
-    background: url(/src/assets/img/Nube\ final@72x.png);
+    background: url(/assets/img/Nube\ final@72x.png);
     background-size: 100%;
     background-position: 0 -5em;
     background-repeat: no-repeat;
@@ -40,7 +40,7 @@ body{
     cursor: pointer;
 }
 .background-piano{
-    background: url(/src/assets/img/fondo\ formulario@72x.png);
+    background: url(/assets/img/fondo\ formulario@72x.png);
     background-size: 100%;
     background-repeat: no-repeat;
 }
