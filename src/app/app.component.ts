@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Jazz';
+  formularioBogota:boolean = false;
+  formularioMedellin:boolean = false;
+
+  mostrarFormulario(ciudad: String){
+    if(ciudad=="bogota"){
+      this.formularioBogota=true;
+      this.formularioMedellin=false;
+    }
+    if(ciudad=="medellin"){
+      this.formularioMedellin=true;
+      this.formularioBogota=false;
+    }
+  }
 }

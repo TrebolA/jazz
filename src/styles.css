@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: Arial-Black;
+    src: url('/src/assets/fonts/Arial\ Black.ttf');
+}
+@font-face {
+    font-family: Akzidenz-md;
+    src: url('/src/assets/fonts/AkzidenzGroteskBE-MdCn.ttf');
+}
+@font-face {
+    font-family: Akzidenz-bold;
+    src: url('/src/assets/fonts/AkzidenzGroteskBE-BoldCn.ttf');
+}
+body{
+    background: url(/src/assets/img/Nube\ final@72x.png);
+    background-size: 100%;
+    background-position: 0 -5em;
+    background-repeat: no-repeat;
+    background-color: #141414;
+    padding: 1em;
+}
+.w-80{
+    width: 80%;
+}
+.font-arial-black{
+    font-family: Arial-Black;
+}
+.font-akzidenz-md{
+    font-family: Akzidenz-md;
+}
+.font-akzidenz-bold{
+    font-family: Akzidenz-bold;
+}
+.text-azul{
+    color: #55aac8;
+}
+.text-rosado{
+    color: #c24776;
+}
+.cursor-pointer:hover{
+    cursor: pointer;
+}
+.background-piano{
+    background: url(/src/assets/img/fondo\ formulario@72x.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}

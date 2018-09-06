@@ -7,8 +7,61 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-  <app-root></app-root>
+  <nav class="navbar navbar-light">
+    <a class="navbar-brand" href="#">
+      <img class="img-fluid w-50" src="./assets/img/Silencio club@72x.png" alt="">
+    </a>
+    <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fas fa-bars text-white"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pt-0 pb-0" href="#"><i class="fab fa-instagram text-white"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pt-0 pb-0" href="#"><i class="fab fa-twitter text-white"></i></a>  
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pt-0 pb-0" href="#"><i class="fab fa-facebook-f text-white"></i></a>
+        </li>
+      </ul>
+  </nav>
+  <div class="container-fluid m-0 mb-5">
+    <div class="row align-items-end border-bottom border-white">
+      <div class="col-lg-3" id="boton-registro"><a href="#app-root"><img class="img-fluid w-50 mb-4" src="./assets/img/boton registrar@72x.png" alt=""></a></div>
+      <div class="col-lg-4 text-center" id="foto-hancock"><img src="./assets/img/fotorrfinal@72x.png" alt="" class="img-fluid w-80"></div>
+      <div class="col-lg-5 text-right" id="info-poster"><img src="./assets/img/copy de k@72x.png" alt="" class="img-fluid w-80 mb-1"></div>
+    </div>
+  </div>
+  <app-root id="app-root"></app-root>
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  <script>
+    ScrollReveal().reveal('.navbar', {duration:3000});
+    ScrollReveal().reveal('#foto-hancock', {duration:2500, delay:800});
+    ScrollReveal().reveal('#info-poster', {duration:2000, delay:1600});
+    ScrollReveal().reveal('#boton-registro', {duration:1500, delay:2200});
+    ScrollReveal().reveal('#app-root', {duration:1500});
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
