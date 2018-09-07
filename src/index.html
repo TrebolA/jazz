@@ -14,10 +14,10 @@
 
   <script src="https://unpkg.com/scrollreveal"></script>
 </head>
-<body>
-  <nav class="navbar navbar-light">
+<body class="p-0">
+  <!--<nav class="navbar navbar-light">
     <a class="navbar-brand" href="#">
-      <img class="img-fluid w-50" src="./assets/img/Silencio club@72x.png" alt="">
+      <img class="img-fluid r-w-50 w-50" src="./assets/img/Silencio club@72x.png" alt="">
     </a>
     <ul class="nav flex-column">
         <li class="nav-item">
@@ -34,25 +34,53 @@
         </li>
       </ul>
   </nav>
-  <div class="container-fluid m-0 mb-5">
-    <div class="row align-items-end border-bottom border-white">
-      <div class="col-lg-3" id="boton-registro"><a href="#app-root"><img class="img-fluid w-50 mb-4" src="./assets/img/boton registrar@72x.png" alt=""></a></div>
-      <div class="col-lg-4 text-center" id="foto-hancock"><img src="./assets/img/fotorrfinal@72x.png" alt="" class="img-fluid w-80"></div>
-      <div class="col-lg-5 text-right" id="info-poster"><img src="./assets/img/copy de k@72x.png" alt="" class="img-fluid w-80 mb-1"></div>
+  <div class="container-fluid m-0">
+    <div class="row border-bottom border-white mt-5">
+      <div class="col-lg-4" id="boton-registro">
+        <a href="#app-root"><img class="img-fluid w-50 mb-4" src="./assets/img/boton registrar@72x.png" alt=""></a>
+        <app-root id="app-root"></app-root>
+      </div>
+      <div class="col-sm-4 text-center align-self-end" id="foto-hancock"><img src="./assets/img/fotorrfinal@72x.png" alt="" class="img-fluid w-72"></div>
+      <div class="col-md-4 text-right align-self-end" id="info-poster"><img src="./assets/img/copy de k@72x.png" alt="" class="img-fluid w-90 mb-1"></div>
     </div>
   </div>
-  <app-root id="app-root"></app-root>
+  <app-root id="app-root"></app-root>-->
+  
+  <div class="container-fluid m-0 background-nubes">
+    <div class="row mt-4 logo">
+      <div class="col-md-4"></div>
+      <div class="col-lg-4 text-center border-bottom border-rosado border-5">
+        <img src="./assets/img/Silencio club@72x.png" class="img-fluid w-80 mb-3" alt="">
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+    <div class="row copy">
+      <div class="col-md-3"></div>
+      <div class="col-md-6 font-arial-black text-center text-white"><h4>NUEVO LANZAMIENTO 12 DE SEPTIEMBRE INSCRÍBETE PARA RECIBIR BENEFICIOS</h4></div>
+      <div class="col-md-3"></div>
+    </div>
+    <div class="row form">
+      <div class="col-md-2"></div>
+      <div class="col-lg-8 mt-3" id="boton-registro">
+        <app-root id="app-root"></app-root>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
   
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
   <script>
+    ScrollReveal().reveal('.background-nubes', {duration:1000});
     ScrollReveal().reveal('.navbar', {duration:3000});
+    ScrollReveal().reveal('.logo', {duration:3000});
     ScrollReveal().reveal('#foto-hancock', {duration:2500, delay:800});
+    ScrollReveal().reveal('.copy', {duration:2500, delay:800});
     ScrollReveal().reveal('#info-poster', {duration:2000, delay:1600});
+    ScrollReveal().reveal('.form', {duration:2000, delay:1600});
     ScrollReveal().reveal('#boton-registro', {duration:1500, delay:2200});
-    ScrollReveal().reveal('#app-root', {duration:1500});
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();

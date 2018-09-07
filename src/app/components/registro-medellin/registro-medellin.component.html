@@ -1,38 +1,38 @@
-<div class="container-fluid m-0 mb-5 mt-3">
+<div class="container-fluid m-0 mt-3">
   <div class="row">
-    <div class="col-sm-1"></div>
-    <div class="col-md-3"><img src="../../../assets/img/Formulario@72x.png" alt="" class="img-fluid w-80"></div>
-    <div class="col-lg-8">
+    <!--<div class="col-sm-1"></div>
+    <div class="col-md-3"><img src="../../../assets/img/Formulario@72x.png" alt="" class="img-fluid w-80"></div>-->
+    <div class="col-lg-12">
       <form>
         <div class="form-group">
-          <label for="inputNombre" class="text-white font-akzidenz-bold h4">NOMBRE</label>
-          <input type="text" class="form-control rounded-0" id="inputNombre" #nombre>
+          <label for="inputNombre" class="text-white font-akzidenz-bold h5">NOMBRE</label>
+          <input type="text" class="form-control rounded-0 form-control-sm" id="inputNombre" #nombre>
         </div>
         <div class="form-group">
-          <label for="inputApellido" class="text-white font-akzidenz-bold h4">APELLIDO</label>
-          <input type="text" class="form-control rounded-0" id="inputApellido" #apellido>
+          <label for="inputApellido" class="text-white font-akzidenz-bold h5">APELLIDO</label>
+          <input type="text" class="form-control rounded-0 form-control-sm" id="inputApellido" #apellido>
         </div>
         <div class="form-group">
-          <label for="inputEmail" class="text-white font-akzidenz-bold h4">CORREO</label>
-          <input type="email" class="form-control rounded-0" id="inputEmail" #correo>
+          <label for="inputEmail" class="text-white font-akzidenz-bold h5">CORREO</label>
+          <input type="email" class="form-control rounded-0 form-control-sm" id="inputEmail" #correo>
         </div>
         <div class="form-group">
-          <label for="inputCelular" class="text-white font-akzidenz-bold h4">CELULAR</label>
-          <input type="number" class="form-control rounded-0" id="inputCelular" #celular>
+          <label for="inputCelular" class="text-white font-akzidenz-bold h5">CELULAR</label>
+          <input type="number" class="form-control rounded-0 form-control-sm" id="inputCelular" #celular>
         </div>
         <div class="form-group form-check">
           <input type="checkbox" class="form-check-input" id="inputCheck1" #terminos>
-          <label class="form-check-label text-white font-akzidenz-bold h5" for="inputCheck1">HE LEIDO Y ACEPTO LOS TERMINOS Y CONDICIONES</label>
+          <label class="form-check-label text-white font-akzidenz-bold h6" for="inputCheck1">HE LEIDO Y ACEPTO LOS TERMINOS Y CONDICIONES</label>
         </div>
         <div class="form-group form-check">
           <input type="checkbox" class="form-check-input" id="inputCheck2" #politica>
-          <label class="form-check-label text-white font-akzidenz-bold h5" for="inputCheck2">HE LEIDO Y ACEPTO LAS POLITICAS DE USO Y PRIVACIDAD</label>
+          <label class="form-check-label text-white font-akzidenz-bold h6" for="inputCheck2">HE LEIDO Y ACEPTO LAS POLITICAS DE USO Y PRIVACIDAD</label>
         </div>
         <button 
           class="btn btn-outline-light rounded-0 font-akzidenz-md pl-4 pr-4 pt-0 pb-0" 
           (click)="addRegistro(nombre, apellido, correo, celular, terminos, politica)"
         >
-          <h4 class="m-0 p-0">ENVIAR</h4>
+          <h5 class="m-0 p-0">ENVIAR</h5>
         </button>
       </form>
     </div>

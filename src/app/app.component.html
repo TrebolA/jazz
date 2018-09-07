@@ -1,21 +1,65 @@
-<div class="container-fluid m-0 mb-5">
+<!--<div class="container-fluid m-0 mb-5">
     <div class="row">
-      <div class="col-md-auto"><h4 class="font-arial-black text-white">BOGOTÁ</h4></div>
-      <div class="col-sm-auto"><h4 class="font-arial-black text-azul">l</h4></div>
-      <div class="col-md-auto"><h4 class="font-arial-black text-white">MEDELLÍN</h4></div>
+      <div class="col-auto"><h5 class="font-arial-black text-white">BOGOTÁ</h5></div>
+      <div class="col-auto"><h5 class="font-arial-black text-azul">l</h5></div>
+      <div class="col-auto"><h5 class="font-arial-black text-white">MEDELLÍN</h5></div>
     </div>
     <div class="row">
-      <div class="col-md-auto cursor-pointer" (click)="mostrarFormulario('bogota')"><h5 class="font-akzidenz-md text-white">REGISTRARSE</h5></div>
-      <div class="col-sm-auto cursor-pointer" (click)="mostrarFormulario('bogota')"><h5 class="font-arial-black text-azul"><i class="fas fa-chevron-circle-right text-rosado"></i></h5></div>
-      <div class="col-sm-auto"></div>
-      <div class="col-md-auto cursor-pointer" (click)="mostrarFormulario('medellin')"><h5 class="font-akzidenz-md text-white">REGISTRARSE</h5></div>
-      <div class="col-sm-auto cursor-pointer" (click)="mostrarFormulario('medellin')"><h5 class="font-arial-black text-azul"><i class="fas fa-chevron-circle-right text-rosado"></i></h5></div>
+      <div class="col-auto cursor-pointer" (click)="mostrarFormulario('bogota')"><h6 class="font-akzidenz-md text-white">REGISTRARSE</h6></div>
+      <div class="col-auto cursor-pointer" (click)="mostrarFormulario('bogota')"><h6 class="font-arial-black text-azul"><i class="fas fa-chevron-circle-right text-rosado"></i></h6></div>
+      <div class="col-auto"></div>
+      <div class="col-auto cursor-pointer" (click)="mostrarFormulario('medellin')"><h6 class="font-akzidenz-md text-white">REGISTRARSE</h6></div>
+      <div class="col-auto cursor-pointer" (click)="mostrarFormulario('medellin')"><h6 class="font-arial-black text-azul"><i class="fas fa-chevron-circle-right text-rosado"></i></h6></div>
     </div>
-    <div class="row background-piano" *ngIf="formularioBogota==true">
+    <div class="row formularios" *ngIf="formularioBogota==true">
       <app-registro-bogota></app-registro-bogota>
     </div>
-    <div class="row background-piano" *ngIf="formularioMedellin==true">
+    <div class="row formularios" *ngIf="formularioMedellin==true">
         <app-registro-medellin></app-registro-medellin>
-      </div>
+    </div>
+</div>-->
+<div class="container-fluid m-0">
+  <div class="row">
+    <div class="col-auto">
+      <form>
+        <div class="form-group">
+          <label for="inputNombre" class="text-white font-akzidenz-bold h5 m-0">NOMBRE</label>
+          <input type="text" class="form-control form-control-sm rounded-0" id="inputNombre" #nombre>
+        </div>
+        <div class="form-group">
+          <label for="inputApellido" class="text-white font-akzidenz-bold h5 m-0">APELLIDO</label>
+          <input type="text" class="form-control rounded-0 form-control-sm" id="inputApellido" #apellido>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail" class="text-white font-akzidenz-bold h5 m-0">CORREO</label>
+          <input type="email" class="form-control rounded-0 form-control-sm" id="inputEmail" #correo>
+        </div>
+        <div class="form-group">
+          <label for="inputCelular" class="text-white font-akzidenz-bold h5 m-0">CELULAR</label>
+          <input type="number" class="form-control rounded-0 form-control-sm" id="inputCelular" #celular>
+        </div>
+        <div class="form-group">
+          <label for="formControlSelect" class="text-white font-akzidenz-bold h5 m-0">CIUDAD</label>
+          <select class="form-control rounded-0 form-control-sm" id="formControlSelect">
+            <option>Bogotá</option>
+            <option>Medellín</option>
+          </select>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="inputCheck1" #terminos>
+          <label class="form-check-label text-white font-akzidenz-bold h6" for="inputCheck1">HE LEIDO Y ACEPTO LOS TERMINOS Y CONDICIONES</label>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="inputCheck2" #politica>
+          <label class="form-check-label text-white font-akzidenz-bold h6" for="inputCheck2">HE LEIDO Y ACEPTO LAS POLITICAS DE USO Y PRIVACIDAD</label>
+        </div>
+        <button 
+          class="btn btn-outline-light rounded-0 font-akzidenz-md pl-4 pr-4 pt-0 pb-0" 
+          (click)="addRegistro(nombre, apellido, correo, celular, terminos, politica)"
+        >
+          <h5 class="m-0 p-0">ENVIAR</h5>
+        </button>
+      </form>
+    </div>
+  </div>
 </div>
-
